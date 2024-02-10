@@ -2,7 +2,7 @@ const Main = () => {
   return (
     <div className="flex flex-col items-center gap-20 pt-28 px-6 pb-[48px] ">
       <div className="text-white flex flex-col items-center ">
-        <h2 className="font-barlowCondensed font-normal text-base">
+        <h2 className="font-barlowCondensed font-normal text-base tracking-[2.7px]">
           SO, YOU WANT TO TRAVEL TO
         </h2>
         <h1 className="font-bellefair font-normal text-[80px] pb-3">SPACE</h1>

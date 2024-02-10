@@ -12,12 +12,18 @@ body {
   
 }
 
-#root {
+/* #root {
   height: 100%;
-}
+} */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.imageDestination {
+  background-image: url("../assets/destination/background-destination-mobile.jpg");
+  background-repeat: no-repeat;
+  
 }

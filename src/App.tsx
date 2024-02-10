@@ -1,6 +1,6 @@
 import Home from "./pages/home";
-import Destination from "./pages/destination.tsx";
-import NavBar from "./components/Navbar.tsx";
+import Destination from "./pages/destination.js";
+import NavBar from "./components/Navbar.js";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
+        <Route path="/destination/:name" element={<Destination />} />
       </Routes>
     </div>
   );

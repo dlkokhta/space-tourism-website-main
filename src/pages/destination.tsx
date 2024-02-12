@@ -142,6 +142,12 @@ const Destination = () => {
                 )}
               </div>
             </div>
+
+
+
+
+
+            
             <div className="text-white font-bellefair uppercase text-[48px] mt-5 ">
               {fetchedDest?.name}
             </div>

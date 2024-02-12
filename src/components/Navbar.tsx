@@ -17,6 +17,10 @@ const NavBar = () => {
     navigate(`/destination/Moon`);
     setHamburgerMenuIsOpen(false);
   };
+  const crewClickeHandler = () => {
+    navigate(`/crew/Douglas Hurley`);
+    setHamburgerMenuIsOpen(false);
+  };
   const navigate = useNavigate();
 
   return (
@@ -49,7 +53,7 @@ const NavBar = () => {
               <ul className="flex gap-2" onClick={destinationClickeHandler}>
                 <span className="font-bold">01</span> DESTINATION
               </ul>
-              <ul className="flex gap-2">
+              <ul className="flex gap-2 " onClick={crewClickeHandler}>
                 <span className="font-bold">02</span> CREW
               </ul>
               <ul className="flex gap-2">

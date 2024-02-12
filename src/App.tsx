@@ -3,6 +3,7 @@ import Destination from "./pages/destination.js";
 import NavBar from "./components/Navbar.js";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import Crew from "./pages/crew.js";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destination/:name" element={<Destination />} />
+        <Route path="/crew/:name" element={<Crew />} />
       </Routes>
     </div>
   );

@@ -48,9 +48,9 @@ const Crew = () => {
       className="w-screen min-h-screen "
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="pt-[88px] px-6 flex flex-col text-center">
+      <div className="pt-[88px] px-6 flex flex-col text-center md:items-start md:pt-[136px] md:pb-[33px]">
         <div>
-          <h1 className="text-white font-barlowCondensed font-normal text-base flex justify-center gap-2 leading-5 tracking-[2.7px]">
+          <h1 className="text-white font-barlowCondensed font-normal text-base md:text-xl flex justify-center gap-2 leading-5 tracking-[2.7px] ">
             <span className="text-gray-700 font-bold">02</span>MEET YOUR CREW
           </h1>
         </div>

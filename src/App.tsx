@@ -5,13 +5,17 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Crew from "./pages/crew.js";
 import Technology from "./pages/technology.js";
+import TabletNavbar from "./components/tabletNavbar.js";
 
 function App() {
   return (
     <div>
-      {/* <div className="md:hidden"> */}
-      <NavBar />
-      {/* </div> */}
+      <div className="md:hidden">
+        <NavBar />
+      </div>
+      <div className="hidden md:block">
+        <TabletNavbar />
+      </div>
 
       <Routes>
         <Route path="/" element={<Home />} />

@@ -51,20 +51,23 @@ const Destination = () => {
   return (
     <div className="bg-[url('../assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/destination/background-destination-tablet.jpg')] md:bg-cover">
       {/* <div className="bg-destinationMobile bg-no-repeat bg-cover md:bg-destinationTablet"> */}
-      <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] ">
+      <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] md:items-start md:pt-[136px] md:pb-[33px]">
         <div>
-          <h1 className="text-white font-barlowCondensed font-normal text-base flex justify-center gap-2 leading-5 tracking-[2.7px]">
+          <h1 className="text-white font-barlowCondensed font-normal md:text-xl text-base flex justify-center gap-2 leading-5 tracking-[2.7px]">
             <span className="text-gray-700 font-bold">01</span>PICK YOUR
             DESTINATION
           </h1>
         </div>
-        <div className="mt-8 flex flex-col items-center">
-          <img src={fetchedDest?.images.png} className="text-white w-[170px]" />
+        <div className="mt-8 md:mt-14 flex flex-col items-center">
+          <img
+            src={fetchedDest?.images.png}
+            className="text-white w-[170px] md:w-[300px]"
+          />
 
-          <div className="mt-5">
-            <div className="flex gap-4 justify-center px-[70px] font-barlowCondensed leading-4 tracking-[2.36px] ">
+          <div className="mt-5 md:mt-10">
+            <div className="flex gap-9 justify-center px-[70px] font-barlowCondensed leading-4 tracking-[2.36px] md:text-base">
               <div
-                className="w-full flex flex-col gap-2 cursor-pointer"
+                className="flex flex-col gap-2 md:gap-3 cursor-pointer"
                 onMouseEnter={() => setMoonHover(true)}
                 onMouseLeave={() => setMoonHover(false)}
               >
@@ -82,7 +85,7 @@ const Destination = () => {
                 )}
               </div>
               <div
-                className="w-full flex flex-col gap-2 cursor-pointer"
+                className="flex flex-col gap-2 cursor-pointer"
                 onMouseEnter={() => setMarsHover(true)}
                 onMouseLeave={() => setMarsHover(false)}
               >
@@ -100,7 +103,7 @@ const Destination = () => {
                 )}
               </div>
               <div
-                className="w-full flex flex-col gap-2 cursor-pointer"
+                className="flex flex-col gap-2 cursor-pointer"
                 onMouseEnter={() => setEuropeHover(true)}
                 onMouseLeave={() => setEuropeHover(false)}
               >
@@ -121,7 +124,7 @@ const Destination = () => {
                 )}
               </div>
               <div
-                className="w-full flex flex-col gap-2 cursor-pointer"
+                className="flex flex-col gap-2 cursor-pointer"
                 onMouseEnter={() => setTitanHover(true)}
                 onMouseLeave={() => setTitanHover(false)}
               >
@@ -140,20 +143,20 @@ const Destination = () => {
               </div>
             </div>
 
-            <div className="text-white font-bellefair uppercase text-[48px] mt-5 ">
+            <div className="text-white font-bellefair uppercase text-[48px] mt-5 md:mt-4 md:text-[80px] md:mb-4">
               {fetchedDest?.name}
             </div>
-            <div className="px-6">
-              <p className="text-white font-barlow font-normal font-base leading-6 mb-8">
+            <div className="px-6 md:px-[95px]">
+              <p className="text-white font-barlow font-normal font-base leading-6 mb-8 md:mb-10 md:text-base">
                 {fetchedDest?.description}
               </p>
               <div className="h-[1px] w-full bg-[#383B4B]"></div>
-              <div className="mt-8">
+              <div className="mt-8 md:flex md:justify-center md:gap-10">
                 <div className="flex flex-col gap-2 mb-8">
                   <h2 className="text-white font-barlowCondensed font-normal text-sm tracking-[2.36px]">
                     AVG. DISTANCE
                   </h2>
-                  <div className="text-white font-bellefair font-normal text-3xl ">
+                  <div className="text-white font-bellefair font-normal text-3xl uppercase ">
                     {fetchedDest?.distance}
                   </div>
                 </div>
@@ -161,7 +164,7 @@ const Destination = () => {
                   <h2 className="text-white font-barlowCondensed font-normal text-sm tracking-[2.36px]">
                     EST. TRAVEL TIME
                   </h2>
-                  <div className="text-white font-bellefair font-normal text-3xl">
+                  <div className="text-white font-bellefair font-normal text-3xl uppercase">
                     {fetchedDest?.travel}
                   </div>
                 </div>

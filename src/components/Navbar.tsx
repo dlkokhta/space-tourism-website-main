@@ -35,7 +35,7 @@ const NavBar = () => {
 
   return (
     <div className="relative">
-      <div className="absolute w-full flex justify-between items-center pt-6 px-6">
+      <div className="absolute w-full flex justify-between items-center pt-6 px-6 ">
         <img className="w-10 h-10" src={logo} alt="logo" />
         <img
           onClick={hamburderClickhandler}

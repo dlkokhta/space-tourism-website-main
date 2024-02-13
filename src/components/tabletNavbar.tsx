@@ -1,74 +1,128 @@
 import logo from "../assets/shared/logo.svg";
 import HamburgerIcon from "../assets/shared/icon-hamburger.svg";
-import closeIcon from "../assets/shared/icon-close.svg";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const NavBar = () => {
-  const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] =
-    useState<boolean>(false);
-  const hamburderClickhandler = () => {
-    setHamburgerMenuIsOpen(true);
-  };
-  const closeIconClickhandler = () => {
-    setHamburgerMenuIsOpen(false);
-  };
+const tabletNavbar = () => {
   const destinationClickeHandler = () => {
     navigate(`/destination/Moon`);
-    setHamburgerMenuIsOpen(false);
+    setDestMenu("DESTINATION");
   };
   const crewClickeHandler = () => {
     navigate(`/crew/Douglas Hurley`);
-    setHamburgerMenuIsOpen(false);
+    setDestMenu("CREW");
   };
 
   const technologyClickeHandler = () => {
     navigate(`/technology/Launch vehicle`);
-    setHamburgerMenuIsOpen(false);
+    setDestMenu("TECHNOLOGY");
   };
 
   const homeClickeHandler = () => {
     navigate(`/`);
-    setHamburgerMenuIsOpen(false);
+    setDestMenu("HOME");
   };
   const navigate = useNavigate();
+  const [destMenu, setDestMenu] = useState<string>("HOME");
+
+  const [homeHovered, setHomeHover] = useState(false);
+  const [destinationHovered, setDestinationHover] = useState(false);
+  const [crewHovered, setCrewHover] = useState(false);
+  const [technologyHovered, setTechnologyHover] = useState(false);
 
   return (
     <div className="relative">
-      <div className="absolute w-full flex justify-between items-center pt-6 px-6">
-        <img className="w-10 h-10" src={logo} alt="logo" />
-        <img
-          onClick={hamburderClickhandler}
-          className="w-6 h-5"
-          src={HamburgerIcon}
-          alt="HamburgerIcon"
-        />
-      </div>
+      <div className="absolute flex flex-row justify-between w-screen md:pl-10">
+        <img className="w-12 h-12 md:mt-6" src={logo} alt="logo" />
 
-      <div className="w-full flex justify-end ">
+        {/* <div className="absolute inset-3 flex  bg-white h-[1px]"></div> */}
+
         <div
-          className="absolute  pt-8 pr-7 pb-[377px] pl-8 text-white  w-[70%] 
-            bg-black/ backdrop-blur-xl h-screen text-base"
+          className="font-barlowCondensed tracking-[2.7px] flex px-12 gap-9
+          bg-[#ffffff0d] text-base items-center
+          h-[96px] "
         >
-          <img
-            onClick={closeIconClickhandler}
-            className="ml-auto"
-            src={closeIcon}
-            alt="closeIcon"
-          />
-          <div className="font-barlowCondensed tracking-[2.7px] flex flex-col gap-7">
-            <ul className="flex gap-2 mt-16" onClick={homeClickeHandler}>
-              <span className="font-bold">00</span> HOME
-            </ul>
-            <ul className="flex gap-2" onClick={destinationClickeHandler}>
-              <span className="font-bold">01</span> DESTINATION
-            </ul>
-            <ul className="flex gap-2 " onClick={crewClickeHandler}>
-              <span className="font-bold">02</span> CREW
-            </ul>
-            <ul className="flex gap-2" onClick={technologyClickeHandler}>
-              <span className="font-bold">03</span> TECHNOLOGY
-            </ul>
+          <div
+            className="flex flex-col cursor-pointer h-full"
+            onMouseEnter={() => setHomeHover(true)}
+            onMouseLeave={() => setHomeHover(false)}
+          >
+            <h1 className="text-white text-sm mt-9" onClick={homeClickeHandler}>
+              HOME
+            </h1>
+            {destMenu === "HOME" ? (
+              <div className="h-[3px] bg-white mt-auto"></div>
+            ) : (
+              <div
+                className={`h-[3px] ${
+                  homeHovered ? "bg-white opacity-50 mt-auto" : ""
+                }`}
+              ></div>
+            )}
+          </div>
+
+          <div
+            className="flex flex-col cursor-pointer h-full"
+            onMouseEnter={() => setDestinationHover(true)}
+            onMouseLeave={() => setDestinationHover(false)}
+          >
+            <h1
+              className="text-white text-sm mt-9"
+              onClick={destinationClickeHandler}
+            >
+              DESTINATION
+            </h1>
+            {destMenu === "DESTINATION" ? (
+              <div className="h-[3px] bg-white mt-auto"></div>
+            ) : (
+              <div
+                className={`h-[3px] ${
+                  destinationHovered ? "bg-white opacity-50 mt-auto" : ""
+                }`}
+              ></div>
+            )}
+          </div>
+
+          <div
+            className=" flex flex-col cursor-pointer h-full"
+            onMouseEnter={() => setCrewHover(true)}
+            onMouseLeave={() => setCrewHover(false)}
+          >
+            <h1 className="text-white text-sm mt-9" onClick={crewClickeHandler}>
+              CREW
+            </h1>
+            {destMenu === "CREW" ? (
+              <div className="h-[3px] bg-white mt-auto"></div>
+            ) : (
+              <div
+                className={`h-[3px] ${
+                  crewHovered ? "bg-white opacity-50 mt-auto" : ""
+                }`}
+              ></div>
+            )}
+          </div>
+
+          <div
+            className=" flex flex-col cursor-pointer h-full"
+            onMouseEnter={() => setTechnologyHover(true)}
+            onMouseLeave={() => setTechnologyHover(false)}
+          >
+            <h1
+              className="text-white text-sm mt-9"
+              onClick={technologyClickeHandler}
+            >
+              TECHNOLOGY
+            </h1>
+            {destMenu === "TECHNOLOGY" ? (
+              <div className="h-[3px] bg-white mt-auto"></div>
+            ) : (
+              <div
+                className={`h-[3px] ${
+                  technologyHovered ? "bg-white opacity-50 mt-auto" : ""
+                }`}
+              ></div>
+            )}
           </div>
         </div>
       </div>
@@ -76,4 +130,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default tabletNavbar;

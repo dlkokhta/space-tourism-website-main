@@ -12,6 +12,12 @@ export default {
 
       },
 
+      // backgroundImage: {
+      //   destinationMobile: "url('./assets/destination/background-destination-mobile.jpg')",
+      //   destinationTablet: "url('./assets/destination/background-destination-tablet.jpg')",
+       
+      // },
+
     },
     
     

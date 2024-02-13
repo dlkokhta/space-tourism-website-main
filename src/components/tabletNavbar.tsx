@@ -44,35 +44,34 @@ const NavBar = () => {
           alt="HamburgerIcon"
         />
       </div>
-      {hamburgerMenuIsOpen && (
-        <div className="w-full flex justify-end ">
-          <div
-            className="absolute  pt-8 pr-7 pb-[377px] pl-8 text-white  w-[70%] 
+
+      <div className="w-full flex justify-end ">
+        <div
+          className="absolute  pt-8 pr-7 pb-[377px] pl-8 text-white  w-[70%] 
             bg-black/ backdrop-blur-xl h-screen text-base"
-          >
-            <img
-              onClick={closeIconClickhandler}
-              className="ml-auto"
-              src={closeIcon}
-              alt="closeIcon"
-            />
-            <div className="font-barlowCondensed tracking-[2.7px] flex flex-col gap-7">
-              <ul className="flex gap-2 mt-16" onClick={homeClickeHandler}>
-                <span className="font-bold">00</span> HOME
-              </ul>
-              <ul className="flex gap-2" onClick={destinationClickeHandler}>
-                <span className="font-bold">01</span> DESTINATION
-              </ul>
-              <ul className="flex gap-2 " onClick={crewClickeHandler}>
-                <span className="font-bold">02</span> CREW
-              </ul>
-              <ul className="flex gap-2" onClick={technologyClickeHandler}>
-                <span className="font-bold">03</span> TECHNOLOGY
-              </ul>
-            </div>
+        >
+          <img
+            onClick={closeIconClickhandler}
+            className="ml-auto"
+            src={closeIcon}
+            alt="closeIcon"
+          />
+          <div className="font-barlowCondensed tracking-[2.7px] flex flex-col gap-7">
+            <ul className="flex gap-2 mt-16" onClick={homeClickeHandler}>
+              <span className="font-bold">00</span> HOME
+            </ul>
+            <ul className="flex gap-2" onClick={destinationClickeHandler}>
+              <span className="font-bold">01</span> DESTINATION
+            </ul>
+            <ul className="flex gap-2 " onClick={crewClickeHandler}>
+              <span className="font-bold">02</span> CREW
+            </ul>
+            <ul className="flex gap-2" onClick={technologyClickeHandler}>
+              <span className="font-bold">03</span> TECHNOLOGY
+            </ul>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

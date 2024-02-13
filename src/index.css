@@ -22,8 +22,18 @@ body {
   box-sizing: border-box;
 }
 
-/* .imageDestination {
-  background-image: url("../assets/destination/background-destination-mobile.jpg");
+.bgHomeMobile {
+background-image: url("../assets/home/background-home-mobile.jpg");
+background-repeat: no-repeat;
+background-size: 100%
+
+
+}
+
+
+
+.bgHomeTablet {
+  background-image: url("../assets/home/background-home-tablet.jpg");
   background-repeat: no-repeat;
-  
-} */
+ 
+}

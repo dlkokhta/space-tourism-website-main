@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import bgImage from "../assets/destination/background-destination-mobile.jpg";
 
 interface DestinationTypes {
   name: string;
@@ -50,10 +49,8 @@ const Destination = () => {
   const [titanHovered, setTitanHover] = useState(false);
 
   return (
-    <div
-      className="w-screen min-h-screen "
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <div className="bg-[url('../assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/destination/background-destination-tablet.jpg')] md:bg-cover">
+      {/* <div className="bg-destinationMobile bg-no-repeat bg-cover md:bg-destinationTablet"> */}
       <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] ">
         <div>
           <h1 className="text-white font-barlowCondensed font-normal text-base flex justify-center gap-2 leading-5 tracking-[2.7px]">
@@ -143,11 +140,6 @@ const Destination = () => {
               </div>
             </div>
 
-
-
-
-
-            
             <div className="text-white font-bellefair uppercase text-[48px] mt-5 ">
               {fetchedDest?.name}
             </div>

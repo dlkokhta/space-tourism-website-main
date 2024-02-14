@@ -49,7 +49,10 @@ const Destination = () => {
   const [titanHovered, setTitanHover] = useState(false);
 
   return (
-    <div className="bg-[url('../assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/destination/background-destination-tablet.jpg')] md:bg-cover">
+    <div
+      className="bg-[url('../assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/destination/background-destination-tablet.jpg')] md:bg-cover
+                 lg:bg-[url('../assets/destination/background-destination-desktop.jpg')]"
+    >
       <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] md:items-start md:pt-[136px] md:pb-[33px] md:px-0">
         <div>
           <h1 className="text-white font-barlowCondensed font-normal md:text-xl text-base flex justify-center gap-2 leading-5 tracking-[2.7px] md:pl-10">

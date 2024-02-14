@@ -31,15 +31,15 @@ export default {
     
     // fontSize: {
     //   "3.2xl": "32px",
-    // },
+    // }, 
     screens: {
       sm: "378px",
       // => @media (min-width: 640px) { ... }
 
-      md: "540px",
+      md: "768px",
       // => @media (min-width: 768px) { ... }
 
-      lg: "768px",
+      lg: "1440px",
       // => @media (min-width: 1024px) { ... }
 
       xl: "1440px",

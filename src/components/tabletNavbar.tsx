@@ -1,5 +1,4 @@
 import logo from "../assets/shared/logo.svg";
-import HamburgerIcon from "../assets/shared/icon-hamburger.svg";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -32,7 +31,7 @@ const tabletNavbar = () => {
   const [technologyHovered, setTechnologyHover] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="absolute flex flex-row justify-between w-screen md:pl-10">
         <img className="w-12 h-12 md:mt-6" src={logo} alt="logo" />
 

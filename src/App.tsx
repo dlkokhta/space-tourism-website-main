@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Crew from "./pages/crew.js";
 import Technology from "./pages/technology.js";
 import TabletNavbar from "./components/tabletNavbar.js";
+import DesktopNavbar from "./components/desktopNavbar.js";
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
       <div className="md:hidden">
         <NavBar />
       </div>
-      <div className="hidden md:block">
+      <div className="hidden lg:hidden md:block">
         <TabletNavbar />
+      </div>
+      <div className="hidden lg:block">
+        <DesktopNavbar />
       </div>
 
       <Routes>

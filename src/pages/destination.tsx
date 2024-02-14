@@ -51,23 +51,23 @@ const Destination = () => {
   return (
     <div
       className="bg-[url('../assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/destination/background-destination-tablet.jpg')] md:bg-cover
-                 lg:bg-[url('../assets/destination/background-destination-desktop.jpg')]"
+                 lg:bg-[url('../assets/destination/background-destination-desktop.jpg')] "
     >
-      <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] md:items-start md:pt-[136px] md:pb-[33px] md:px-0">
+      <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] md:items-start md:pt-[136px] md:pb-[33px] md:px-0 lg:pb-[70px]">
         <div>
-          <h1 className="text-white font-barlowCondensed font-normal md:text-xl text-base flex justify-center gap-2 leading-5 tracking-[2.7px] md:pl-10">
+          <h1 className="text-white font-barlowCondensed font-normal md:text-xl text-base flex justify-center gap-2 leading-5 tracking-[2.7px] md:pl-10 lg:pt-[76px] lg:pl-[167px] lg:text-[28px]">
             <span className="text-gray-700 font-bold">01</span>PICK YOUR
             DESTINATION
           </h1>
         </div>
-        <div className="mt-8 md:mt-14 flex flex-col items-center ">
+        <div className="mt-8 md:mt-14 flex flex-col items-center lg:flex-row lg:gap-[157px]">
           <img
             src={fetchedDest?.images.png}
-            className="text-white w-[170px] md:w-[300px]"
+            className="text-white w-[170px] md:w-[300px] lg:w-[445px] lg:ml-[230px]"
           />
 
-          <div className="mt-5 md:mt-10">
-            <div className="flex gap-9 justify-center px-[70px] font-barlowCondensed leading-4 tracking-[2.36px] md:text-base">
+          <div className="mt-5 md:mt-10 lg:pr-[163px]">
+            <div className="flex gap-9 justify-center px-[70px] font-barlowCondensed leading-4 tracking-[2.36px] md:text-base lg:px-0 lg:justify-start">
               <div
                 className="flex flex-col gap-2 md:gap-3 cursor-pointer"
                 onMouseEnter={() => setMoonHover(true)}
@@ -145,17 +145,17 @@ const Destination = () => {
               </div>
             </div>
 
-            <div className="text-white font-bellefair uppercase text-[48px] mt-5 md:mt-4 md:text-[80px] md:mb-4">
+            <div className="text-white font-bellefair uppercase text-[48px] mt-5 md:mt-4 md:text-[80px] md:mb-4 lg:text-[100px] lg:text-left">
               {fetchedDest?.name}
             </div>
-            <div className="px-6 md:px-[95px]">
-              <p className="text-white font-barlow font-normal font-base leading-6 mb-8 md:mb-10 md:text-base">
+            <div className="px-6 md:px-[95px] lg:px-0">
+              <p className="text-white font-barlow font-normal font-base leading-6 mb-8 md:mb-10 md:text-base lg:text-lg lg:text-left">
                 {fetchedDest?.description}
               </p>
               <div className="h-[1px] w-full bg-[#383B4B]"></div>
-              <div className="mt-8 md:flex md:justify-center md:gap-10">
+              <div className="mt-8 md:flex md:justify-center md:gap-10 lg:justify-start lg:gap-[80px]">
                 <div className="flex flex-col gap-2 mb-8">
-                  <h2 className="text-white font-barlowCondensed font-normal text-sm tracking-[2.36px]">
+                  <h2 className="text-white font-barlowCondensed font-normal text-sm tracking-[2.36px] lg:text-left">
                     AVG. DISTANCE
                   </h2>
                   <div className="text-white font-bellefair font-normal text-3xl uppercase ">
@@ -163,10 +163,10 @@ const Destination = () => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-white font-barlowCondensed font-normal text-sm tracking-[2.36px]">
+                  <h2 className="text-white font-barlowCondensed font-normal text-sm tracking-[2.36px] ">
                     EST. TRAVEL TIME
                   </h2>
-                  <div className="text-white font-bellefair font-normal text-3xl uppercase">
+                  <div className="text-white font-bellefair font-normal text-3xl uppercase lg:text-left">
                     {fetchedDest?.travel}
                   </div>
                 </div>

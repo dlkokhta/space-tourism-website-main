@@ -47,33 +47,32 @@ const Crew = () => {
       className="w-screen min-h-screen bg-[url('../assets/crew/background-crew-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/crew/background-crew-tablet.jpg')] md:bg-cover
     "
     >
-      <div className="pt-[88px] px-6 flex flex-col text-center md:items-start md:pt-[136px] md:px-0">
+      <div className="pt-[88px] px-6 flex flex-col text-center md:items-start md:pt-[136px] md:px-0 lg:pt-[212px]">
         <div>
-          <h1 className="text-white font-barlowCondensed font-normal text-base md:text-xl flex justify-center gap-2 leading-5 tracking-[2.7px] md:pl-10">
+          <h1 className="text-white font-barlowCondensed font-normal text-base md:text-xl flex justify-center gap-2 leading-5 tracking-[2.7px] md:pl-10 lg:pl-[167px] lg:text-[28px]">
             <span className="text-gray-700 font-bold">02</span>MEET YOUR CREW
           </h1>
         </div>
-        <div className="mt-8 flex flex-col items-center ">
+        <div className="mt-8 flex flex-col items-center lg:flex-row lg:pl-[166px] lg:pr-[137px]">
           <img className=" h-[222px] md:hidden" src={fetchedCrew?.images.png} />
           <div className="h-[1px] w-full bg-[#383B4B] md:hidden" />
 
-          <div className=" mt-5 hidden md:block">
-            <div className="text-white opacity-50 font-bellefair uppercase text-2xl font-normal">
-              {fetchedCrew?.role}
-            </div>
-            <div className="text-white font-bellefair uppercase font-normal text-[40px] ">
-              {fetchedCrew?.name}
-            </div>
-            <p className="text-white mt-4 font-normal text-base font-barlow px-[140px]">
-              {fetchedCrew?.bio}
-            </p>
-          </div>
-
           <div className="mt-5">
-            <div className="flex gap-4 justify-center px-[70px] font-barlowCondensed leading-4 tracking-[2.36px] ">
+            <div className=" mt-5 hidden md:block">
+              <div className="text-white opacity-50 font-bellefair uppercase text-2xl font-normal lg:text-[32px] lg:text-left">
+                {fetchedCrew?.role}
+              </div>
+              <div className="text-white font-bellefair uppercase font-normal text-[40px] lg:text-[56px] lg:text-left">
+                {fetchedCrew?.name}
+              </div>
+              <p className="text-white mt-4 font-normal text-base font-barlow px-[160px] lg:text-lg lg:text-left lg:pl-0 lg:leading-8">
+                {fetchedCrew?.bio}
+              </p>
+            </div>
+            <div className="flex gap-4 justify-center px-[70px] font-barlowCondensed leading-4 tracking-[2.36px] md:mt-5 lg:justify-start lg:px-0 lg:mt-[150px]">
               <div>
                 <div
-                  className={`bg-white w-[10px] h-[10px] rounded-full cursor-pointer hover:opacity-50
+                  className={`bg-white w-[10px] h-[10px] rounded-full cursor-pointer hover:opacity-50 lg:w-[15px] lg:h-[15px]
                      ${
                        crewMenu === "Douglas Hurley"
                          ? "bg-white"
@@ -85,7 +84,7 @@ const Crew = () => {
 
               <div>
                 <div
-                  className={`bg-white w-[10px] h-[10px] rounded-full cursor-pointer hover:opacity-50
+                  className={`bg-white w-[10px] h-[10px] rounded-full cursor-pointer hover:opacity-50 lg:w-[15px] lg:h-[15px]
                       ${
                         crewMenu === "Mark Shuttleworth"
                           ? "bg-white"
@@ -97,7 +96,7 @@ const Crew = () => {
 
               <div>
                 <h1
-                  className={`bg-white w-[10px] h-[10px] rounded-full cursor-pointer hover:opacity-50
+                  className={`bg-white w-[10px] h-[10px] rounded-full cursor-pointer hover:opacity-50 lg:w-[15px] lg:h-[15px]
                     ${
                       crewMenu === "Victor Glover"
                         ? "bg-white"
@@ -108,7 +107,7 @@ const Crew = () => {
               </div>
               <div>
                 <h1
-                  className={`bg-white w-[10px] h-[10px] rounded-full cursor-pointer hover:opacity-50
+                  className={`bg-white w-[10px] h-[10px] rounded-full cursor-pointer hover:opacity-50 lg:w-[15px] lg:h-[15px]
                     ${
                       crewMenu === "Anousheh Ansari"
                         ? "bg-white"
@@ -133,7 +132,7 @@ const Crew = () => {
           </div>
 
           <img
-            className=" h-[572px] hidden md:block mt-[25px]"
+            className=" h-[572px] hidden md:block mt-[25px] lg:h-[712px] lg:mt-[-80px]"
             src={fetchedCrew?.images.png}
           />
         </div>

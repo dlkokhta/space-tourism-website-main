@@ -53,32 +53,32 @@ const Technology = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="pt-[88px] px-6 flex flex-col text-center">
+      <div className="pt-[88px] px-6 flex flex-col text-center md:items-start md:pt-[136px] md:px-0">
         <div>
-          <h1 className="text-white font-barlowCondensed font-normal text-base flex justify-center gap-2 leading-5 tracking-[2.7px]">
+          <h1 className="text-white font-barlowCondensed font-normal text-base md:pl-10 md:text-xl flex justify-center gap-2 leading-5 tracking-[2.7px]">
             <span className="text-gray-700 font-bold">03</span>SPACE LUNCH 101
           </h1>
         </div>
-        <div className="mt-8 flex flex-col items-center ">
+        <div className="mt-8 md:mt-14 flex flex-col items-center ">
           <img className=" " src={fetchedTechnology?.images.landscape} />
 
-          <div className="mt-7">
+          <div className="mt-7 md:mt-14">
             <div className="flex gap-4 justify-center px-[70px] font-barlowCondensed leading-4 tracking-[2.36px] ">
               <div>
                 <div
-                  className={`bg-white flex items-center justify-center w-[40px] h-[40px] rounded-full cursor-pointer border border-white border-opacity-25 hover:border-white
+                  className={` flex items-center justify-center w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full cursor-pointer border border-white border-opacity-25 hover:border-white
                      ${
                        technologyMenu === "Launch vehicle"
-                         ? "bg-white"
-                         : "bg-black"
+                         ? "bg-white md:text-2xl"
+                         : "bg-black md:text-2xl"
                      } `}
                   onClick={() => handleClick("Launch vehicle")}
                 >
                   <span
                     className={`${
                       technologyMenu === "Launch vehicle"
-                        ? "text-black"
-                        : "text-white"
+                        ? "text-black md:text-2xl"
+                        : "text-white md:text-2xl"
                     }`}
                   >
                     1
@@ -88,7 +88,7 @@ const Technology = () => {
 
               <div>
                 <div
-                  className={`bg-white flex items-center justify-center w-[40px] h-[40px] rounded-full cursor-pointer border border-white border-opacity-25 hover:border-white
+                  className={` flex items-center justify-center w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full cursor-pointer border border-white border-opacity-25 hover:border-white
                       ${
                         technologyMenu === "Spaceport" ? "bg-white" : "bg-black"
                       } `}
@@ -97,8 +97,8 @@ const Technology = () => {
                   <span
                     className={`${
                       technologyMenu === "Spaceport"
-                        ? "text-black"
-                        : "text-white"
+                        ? "text-black md:text-2xl"
+                        : "text-white md:text-2xl"
                     }`}
                   >
                     2
@@ -108,19 +108,19 @@ const Technology = () => {
 
               <div>
                 <div
-                  className={`bg-white flex items-center justify-center w-[40px] h-[40px] rounded-full cursor-pointer border border-white border-opacity-25 hover:border-white
+                  className={` flex items-center justify-center w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full cursor-pointer border border-white border-opacity-25 hover:border-white
                     ${
                       technologyMenu === "Space capsule"
-                        ? "bg-white"
-                        : "bg-black"
+                        ? "bg-white md:text-2xl"
+                        : "bg-black md:text-2xl"
                     } `}
                   onClick={() => handleClick("Space capsule")}
                 >
                   <span
                     className={`${
                       technologyMenu === "Space capsule"
-                        ? "text-black"
-                        : "text-white"
+                        ? "text-black md:text-2xl"
+                        : "text-white md:text-2xl"
                     }`}
                   >
                     3
@@ -128,14 +128,14 @@ const Technology = () => {
                 </div>
               </div>
             </div>
-            <div className=" mt-5">
-              <div className="text-[#D0D6F9] font-barlowCondensed text-sm tracking-[2.36px]">
+            <div className=" mt-5 md:mt-12">
+              <div className="text-[#D0D6F9] font-barlowCondensed text-sm tracking-[2.36px] md:text-base">
                 THE TERMINOLOGY...
               </div>
-              <div className="text-white font-bellefair uppercase font-normal text-2xl mt-2">
+              <div className="text-white font-bellefair uppercase font-normal text-2xl mt-2 md:text-[40px] md:mt-8">
                 {fetchedTechnology?.name}
               </div>
-              <p className="text-white mt-4 font-normal text-[15px] font-barlow">
+              <p className="text-white mt-4 font-normal text-[15px] font-barlow md:px-[155px] md:text-base md:mt-8">
                 {fetchedTechnology?.description}
               </p>
             </div>

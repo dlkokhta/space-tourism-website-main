@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import bgImage from "../assets/crew/background-crew-mobile.jpg";
 
 interface crewTypes {
   name: string;
@@ -45,18 +44,31 @@ const Crew = () => {
 
   return (
     <div
-      className="w-screen min-h-screen "
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="w-screen min-h-screen bg-[url('../assets/crew/background-crew-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/crew/background-crew-tablet.jpg')] md:bg-cover
+    "
     >
-      <div className="pt-[88px] px-6 flex flex-col text-center md:items-start md:pt-[136px] md:pb-[33px]">
+      <div className="pt-[88px] px-6 flex flex-col text-center md:items-start md:pt-[136px] md:px-0">
         <div>
-          <h1 className="text-white font-barlowCondensed font-normal text-base md:text-xl flex justify-center gap-2 leading-5 tracking-[2.7px] ">
+          <h1 className="text-white font-barlowCondensed font-normal text-base md:text-xl flex justify-center gap-2 leading-5 tracking-[2.7px] md:pl-10">
             <span className="text-gray-700 font-bold">02</span>MEET YOUR CREW
           </h1>
         </div>
         <div className="mt-8 flex flex-col items-center ">
-          <img className=" h-[222px]" src={fetchedCrew?.images.png} />
-          <div className="h-[1px] w-full bg-[#383B4B]" />
+          <img className=" h-[222px] md:hidden" src={fetchedCrew?.images.png} />
+          <div className="h-[1px] w-full bg-[#383B4B] md:hidden" />
+
+          <div className=" mt-5 hidden md:block">
+            <div className="text-white opacity-50 font-bellefair uppercase text-2xl font-normal">
+              {fetchedCrew?.role}
+            </div>
+            <div className="text-white font-bellefair uppercase font-normal text-[40px] ">
+              {fetchedCrew?.name}
+            </div>
+            <p className="text-white mt-4 font-normal text-base font-barlow px-[140px]">
+              {fetchedCrew?.bio}
+            </p>
+          </div>
+
           <div className="mt-5">
             <div className="flex gap-4 justify-center px-[70px] font-barlowCondensed leading-4 tracking-[2.36px] ">
               <div>
@@ -106,7 +118,8 @@ const Crew = () => {
                 ></h1>
               </div>
             </div>
-            <div className=" mt-5">
+
+            <div className=" mt-5 md:hidden">
               <div className="text-white opacity-50 font-bellefair uppercase text-base font-normal">
                 {fetchedCrew?.role}
               </div>
@@ -118,6 +131,11 @@ const Crew = () => {
               </p>
             </div>
           </div>
+
+          <img
+            className=" h-[572px] hidden md:block mt-[25px]"
+            src={fetchedCrew?.images.png}
+          />
         </div>
       </div>
     </div>

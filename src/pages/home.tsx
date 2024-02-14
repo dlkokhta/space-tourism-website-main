@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div
       className="bg-[url('../assets/home/background-home-mobile.jpg')] bg-no-repeat bg-cover 
-        max-h-screen md:bg-[url('../assets/home/background-home-tablet.jpg')]"
+        min-h-screen md:bg-[url('../assets/home/background-home-tablet.jpg')]"
     >
       <Main />
     </div>

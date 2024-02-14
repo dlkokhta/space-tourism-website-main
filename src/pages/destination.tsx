@@ -50,15 +50,14 @@ const Destination = () => {
 
   return (
     <div className="bg-[url('../assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/destination/background-destination-tablet.jpg')] md:bg-cover">
-      {/* <div className="bg-destinationMobile bg-no-repeat bg-cover md:bg-destinationTablet"> */}
-      <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] md:items-start md:pt-[136px] md:pb-[33px]">
+      <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] md:items-start md:pt-[136px] md:pb-[33px] md:px-0">
         <div>
-          <h1 className="text-white font-barlowCondensed font-normal md:text-xl text-base flex justify-center gap-2 leading-5 tracking-[2.7px]">
+          <h1 className="text-white font-barlowCondensed font-normal md:text-xl text-base flex justify-center gap-2 leading-5 tracking-[2.7px] md:pl-10">
             <span className="text-gray-700 font-bold">01</span>PICK YOUR
             DESTINATION
           </h1>
         </div>
-        <div className="mt-8 md:mt-14 flex flex-col items-center">
+        <div className="mt-8 md:mt-14 flex flex-col items-center ">
           <img
             src={fetchedDest?.images.png}
             className="text-white w-[170px] md:w-[300px]"

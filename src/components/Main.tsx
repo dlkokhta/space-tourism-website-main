@@ -1,6 +1,6 @@
 const Main = () => {
   return (
-    <div className="flex flex-col items-center gap-6 pt-28 px-6  pb-[48px] md:pt-[202px] min-h-screen md:gap-20 md:pb-[90px]">
+    <div className="flex flex-col items-center gap-6 pt-28 px-6  pb-[48px] md:pt-[202px] min-h-screen md:gap-20">
       <div className="text-white flex flex-col items-center ">
         <h2 className="font-barlowCondensed font-normal text-base tracking-[2.7px] md:text-xl">
           SO, YOU WANT TO TRAVEL TO

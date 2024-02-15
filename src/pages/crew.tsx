@@ -44,7 +44,7 @@ const Crew = () => {
 
   return (
     <div
-      className="w-screen min-h-screen bg-[url('../assets/crew/background-crew-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/crew/background-crew-tablet.jpg')] md:bg-cover
+      className="w-screen min-h-screen bg-[url('../assets/crew/background-crew-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/crew/background-crew-tablet.jpg')] md:bg-cover lg:bg-[url('../assets/crew/background-crew-desktop.jpg')]
     "
     >
       <div className="pt-[88px] px-6 flex flex-col text-center md:items-start md:pt-[136px] md:px-0 lg:pt-[212px]">

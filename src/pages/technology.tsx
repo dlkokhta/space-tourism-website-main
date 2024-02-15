@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import bgImage from "../assets/technology/background-technology-mobile.jpg";
 
 interface technologyTypes {
   name: string;

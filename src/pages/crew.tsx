@@ -24,7 +24,7 @@ const Crew = () => {
     const fetchCrew = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/crews/${name}`
+          `https://space-tourism-website-main-api-2-production.up.railway.app/api/crews/${name}`
         );
         setFetchedCrew(response.data);
       } catch (error) {

@@ -25,7 +25,7 @@ const Destination = () => {
     const fetchDestination = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/destinations/${name}`
+          `https://space-tourism-website-main-api-2-production.up.railway.app/api/destinations/${name}`
         );
         setFetchedDest(response.data);
       } catch (error) {

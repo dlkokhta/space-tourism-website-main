@@ -53,7 +53,7 @@ const Destination = () => {
       className="bg-[url('../assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat md:bg-[url('../assets/destination/background-destination-tablet.jpg')] md:bg-cover
                  lg:bg-[url('../assets/destination/background-destination-desktop.jpg')] "
     >
-      <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] md:items-start md:pt-[136px] md:pb-[33px] md:px-0 lg:pb-[70px]">
+      <div className="pt-[88px] px-6 flex flex-col text-center pb-[58px] md:items-start md:pt-[136px] md:pb-[33px] md:px-0 lg:pb-[190px]">
         <div>
           <h1 className="text-white font-barlowCondensed font-normal md:text-xl text-base flex justify-center gap-2 leading-5 tracking-[2.7px] md:pl-10 lg:pt-[76px] lg:pl-[167px] lg:text-[28px]">
             <span className="text-gray-700 font-bold">01</span>PICK YOUR

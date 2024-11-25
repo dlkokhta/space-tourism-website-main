@@ -25,7 +25,7 @@ const Technology = () => {
     const fetchCrew = async () => {
       try {
         const response = await axios.get(
-          `https://space-tourism-website-main-api-2-production.up.railway.app/api/technologies/${name}`
+          `https://space-tourism-website-api.dimitrikokhtashvili.site/api/technologies/${name}`
         );
         setFetchedTechnology(response.data);
       } catch (error) {
